@@ -1,0 +1,44 @@
+.dropOverActive{
+    border:dashed;
+    background-color: lightgreen;
+}
+
+.parmDropOverActive{
+    border:dashed;
+    background-color: lightblue;
+}
+
+.mainDrop{
+    height:300px;
+    display:flex; 
+    align-items:center;
+}
+
+.dragfromdiv{
+    background-color:rgb(240, 252, 255);
+    border:solid;
+    height:100px;
+    display:flex; 
+    align-items:center;
+}
+
+.noDrop {
+    border:solid;
+}
+
+.parmNoDrop{
+    border:solid;
+}
+
+.functionBox{
+    width: auto; 
+    height: 40px; 
+    margin:5px; 
+    border:solid;
+}
+
+.paramBox{
+    width: 70px; 
+    height: 40px; 
+    margin: 5px;
+}

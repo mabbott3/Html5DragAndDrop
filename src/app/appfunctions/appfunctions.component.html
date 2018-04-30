@@ -1,0 +1,25 @@
+
+
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-sm-6 col col-sm-offset-3 mainDrop"  [class.dropOverActive]="dropOverActive" [class.noDrop]="!dropOverActive"
+    mwlDroppable
+    (dragEnter)="dropOverActive = true"
+    (dragLeave)="dropOverActive = false"
+    (drop)="onDrop($event)" >
+
+     <app-innerfunctions [parentData]=activefunctions></app-innerfunctions>
+
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 dragfromdiv">
+      <div *ngFor="let function of allfunctions" mwlDraggable dropData="{{function.name}}" class="col-sm-3 functionBox" >
+          <i class="fa fa-plus-square" *ngIf="function.name === 'Add';" ></i>
+          <i class="fa fa-minus-square" *ngIf="function.name === 'Subtract';" ></i>
+          <i class="fa fa-check-square" *ngIf="function.name === 'Foo';" ></i>
+          <i class="fa fa-cog" *ngIf="function.name === 'Dosomething';" ></i>{{function.name}}
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div *ngIf="activefunctions != undefined && activefunctions[0] != undefined">
+<div class="col-sm-3 functionBox">
+  <i class="fa fa-plus-square" *ngIf="activefunctions[0]?.name === 'Add';"></i>
+  <i class="fa fa-minus-square" *ngIf="activefunctions[0]?.name === 'Subtract';"></i>
+  <i class="fa fa-check-square" *ngIf="activefunctions[0]?.name === 'Foo';"></i>
+  <i class="fa fa-cog" *ngIf="activefunctions[0]?.name === 'Dosomething';"></i>
+  {{activefunctions[0].name}}</div>
+<div *ngFor="let param of activefunctions[0]?.params" 
+  (drop)="onDropInner($event)" class="col-sm-3 paramBox">
+  <!-- mwlDroppable (dragEnter)="parmDropOverActive = true" (dragLeave)="parmDropOverActive = false"
+  [class.parmDropOverActive]="parmDropOverActive" [class.parmNoDrop]="!parmDropOverActive">  -->
+
+  <!-- commented the bonus attempt at making it recursive as didnt get it perfect -->
+   <!-- <app-innerfunctions [parentData]=innerActivefunctions></app-innerfunctions> -->
+
+</div>
+</div> 
